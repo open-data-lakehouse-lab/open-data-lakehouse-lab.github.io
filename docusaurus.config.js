@@ -5,7 +5,7 @@ import {themes as draculaThemes} from 'prism-react-renderer';
 const config = {
   title: 'Open Data Lakehouse Lab',
   tagline: 'A personal open-source laboratory for building a multi-cloud open data lakehouse.',
-  // favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://open-data-lakehouse-lab.github.io',
@@ -52,9 +52,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      // image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.png',
       navbar: {
         title: 'Open Data Lakehouse Lab',
+        logo: {
+          alt: 'Open Data Lakehouse Lab Logo',
+          src: 'img/logo.png',
+        },
         items: [
           {
             type: 'docSidebar',
@@ -63,7 +67,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/open-data-lakehouse-lab/open-data-lakehouse-lab.github.io',
+            href: 'https://github.com/open-data-lakehouse-lab',
             label: 'GitHub',
             position: 'right',
           },
@@ -90,7 +94,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/open-data-lakehouse-lab/open-data-lakehouse-lab.github.io',
+                href: 'https://github.com/open-data-lakehouse-lab',
               },
             ],
           },

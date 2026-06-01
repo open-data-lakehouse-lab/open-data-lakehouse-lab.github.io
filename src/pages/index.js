@@ -8,6 +8,11 @@ function HomepageHeader() {
   return (
     <header style={{padding: '4rem 0', textAlign: 'center', background: 'var(--ifm-color-primary)', color: 'white'}}>
       <div className="container">
+        <img
+          src="/img/brand/source-logo-full.png"
+          alt="Open Data Lakehouse Lab Logo"
+          style={{maxWidth: '600px', width: '100%', marginBottom: '2rem'}}
+        />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: '2rem'}}>

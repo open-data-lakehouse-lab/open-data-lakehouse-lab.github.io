@@ -29,6 +29,15 @@ To run the documentation site locally:
     npm run build
     ```
 
+## Asset Management
+
+To generate the operational website assets from the source brand assets:
+
+```bash
+pip install Pillow
+python3 scripts/generate-brand-assets.py
+```
+
 ## Project Status
 
 This project is public, open source and independent. It is not affiliated with any company or organization.
