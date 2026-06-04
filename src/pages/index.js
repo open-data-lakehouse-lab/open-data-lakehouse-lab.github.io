@@ -51,6 +51,20 @@ export default function Home() {
                 <p>Reproducible environments using modern IaC tools.</p>
               </div>
             </div>
+            <div className="row" style={{marginTop: '2rem'}}>
+              <div className="col col--12 text--center">
+                <div style={{padding: '2rem', border: '1px solid #eee', borderRadius: '8px'}}>
+                  <h3>Current Status: Local Weather MVP</h3>
+                  <p>A first local Weather MVP vertical slice is now implemented, covering:</p>
+                  <code style={{display: 'block', padding: '1rem', background: '#f8f9fa', borderRadius: '4px'}}>
+                    catalog -> ingestion -> transformation -> quality -> orchestration -> observability -> dashboards
+                  </code>
+                  <p style={{marginTop: '1rem'}}>
+                    <Link to="/docs/mvp/weather-local-vertical-slice">Learn more about the Weather MVP</Link>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

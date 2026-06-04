@@ -10,6 +10,13 @@ The documentation is built with Docusaurus and published to GitHub Pages.
 
 Visit the live site: [https://open-data-lakehouse-lab.github.io](https://open-data-lakehouse-lab.github.io)
 
+### Key Documentation Pages
+
+- [Weather Local Vertical Slice](https://open-data-lakehouse-lab.github.io/docs/mvp/weather-local-vertical-slice)
+- [Architecture: Current Local Flow](https://open-data-lakehouse-lab.github.io/docs/architecture/current-local-flow)
+- [Implemented Repositories](https://open-data-lakehouse-lab.github.io/docs/repositories/implemented-repositories)
+- [Project Roadmap and Current Status](https://open-data-lakehouse-lab.github.io/docs/roadmap/current-status)
+
 ## Local Development
 
 To run the documentation site locally:
