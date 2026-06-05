@@ -32,6 +32,26 @@ The flow currently focuses on the following stages:
 7. **Observability**: Producing JSON and Markdown reports.
 8. **Dashboards**: Generating a static HTML dashboard.
 
+## Local E2E validation
+
+A complete local run was verified successfully.
+
+- The run used sample/offline ingestion.
+- The flow produced landing JSON, bronze JSONL, run summary, observability reports and a static HTML dashboard.
+- Generated artifacts are reproducible and not committed.
+- This validation demonstrates the local MVP slice, not production readiness.
+
+### Verified artifact paths (relative)
+
+```text
+orchestration/workspace/runs/<run-id>/landing/landing/weather/meteocat/meteocat-weather/ingestion_date=<date>/sample.json
+orchestration/workspace/runs/<run-id>/bronze/bronze/weather/meteocat/stations-metadata/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/reports/run-summary.json
+orchestration/workspace/observability/run-observability-report.json
+orchestration/workspace/observability/run-observability-report.md
+orchestration/workspace/dashboard/index.html
+```
+
 ## Security and Credentials
 
 - **API Keys**: Real API keys are never committed to the repositories.

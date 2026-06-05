@@ -10,7 +10,7 @@ This page tracks the current progress and roadmap of the Open Data Lakehouse Lab
 
 ### M1 - Weather MVP Local Slice
 - **Status**: In progress / First local vertical slice implemented.
-- **Details**: The `meteocat-weather` dataset flow is functional in a local environment, covering catalog selection through to static dashboard generation.
+- **Details**: The `meteocat-weather` dataset flow is functional in a local environment, covering catalog selection through to static dashboard generation. First local E2E run verified successfully.
 
 ## Implementation Details
 
