@@ -10,9 +10,11 @@ flowchart LR
     B --> C[Landing Quality<br/>JSON validation]
     C --> D[Transformation<br/>bronze JSONL]
     D --> E[Bronze Quality<br/>JSONL validation]
-    E --> F[Orchestration<br/>run-summary.json]
-    F --> G[Observability<br/>JSON and Markdown reports]
-    G --> H[Dashboards<br/>static HTML]
+    E --> F[Silver Transformation<br/>silver JSONL]
+    F --> G[Silver Quality<br/>JSONL validation]
+    G --> H[Orchestration<br/>run-summary.json]
+    H --> I[Observability<br/>JSON and Markdown reports]
+    I --> J[Dashboards<br/>static HTML]
 ```
 
 ## Local Artifact Types
@@ -21,7 +23,8 @@ The flow produces the following artifact types:
 
 - **Landing**: `JSON`
 - **Bronze**: `JSONL`
+- **Silver**: `JSONL`
 - **Observability**: `JSON` and `Markdown` reports
-- **Dashboards**: static `HTML`
+- **Dashboard**: static `HTML`
 
 Note: Apache Parquet is currently being evaluated for future implementation but is not part of the current local MVP flow.

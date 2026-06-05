@@ -26,26 +26,36 @@ The flow currently focuses on the following stages:
 1. **Dataset Catalog Selection**: Selecting `meteocat-weather`.
 2. **Ingestion**: Generating landing JSON files. Real Meteocat ingestion exists as an opt-in feature for selected resources.
 3. **Landing Quality**: JSON validation checks.
-4. **Transformation**: Converting landing JSON to bronze JSONL.
+4. **Transformation (Bronze)**: Converting landing JSON to bronze JSONL.
 5. **Bronze Quality**: JSONL validation checks.
-6. **Orchestration**: Generating a run summary.
-7. **Observability**: Producing JSON and Markdown reports.
-8. **Dashboards**: Generating a static HTML dashboard.
+6. **Transformation (Silver)**: Converting bronze JSONL to silver JSONL foundation.
+7. **Silver Quality**: JSONL validation checks.
+8. **Orchestration**: Generating a run summary.
+9. **Observability**: Producing JSON and Markdown reports.
+10. **Dashboards**: Generating a static HTML dashboard.
 
 ## Local E2E validation
 
-A complete local run was verified successfully.
+A complete local run with Silver was verified successfully.
 
 - The run used sample/offline ingestion.
-- The flow produced landing JSON, bronze JSONL, run summary, observability reports and a static HTML dashboard.
+- The flow produced:
+  - landing JSON
+  - bronze JSONL
+  - silver JSONL
+  - run summary
+  - observability reports
+  - static HTML dashboard
 - Generated artifacts are reproducible and not committed.
 - This validation demonstrates the local MVP slice, not production readiness.
+- Silver is a local foundation and not a final analytics model.
 
 ### Verified artifact paths (relative)
 
 ```text
 orchestration/workspace/runs/<run-id>/landing/landing/weather/meteocat/meteocat-weather/ingestion_date=<date>/sample.json
 orchestration/workspace/runs/<run-id>/bronze/bronze/weather/meteocat/stations-metadata/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/silver/silver/weather/meteocat/stations/processing_date=<date>/records.jsonl
 orchestration/workspace/runs/<run-id>/reports/run-summary.json
 orchestration/workspace/observability/run-observability-report.json
 orchestration/workspace/observability/run-observability-report.md
