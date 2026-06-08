@@ -36,26 +36,32 @@ The flow currently focuses on the following stages:
 
 ## Local E2E validation
 
-A complete local run with Silver was verified successfully.
+A complete local multi-resource run with Silver was verified successfully.
 
+- The run used `--resource all`.
 - The run used sample/offline ingestion.
 - The flow produced:
   - landing JSON
-  - bronze JSONL
-  - silver JSONL
+  - bronze JSONL for each supported resource
+  - silver JSONL for each supported entity
   - run summary
   - observability reports
   - static HTML dashboard
 - Generated artifacts are reproducible and not committed.
 - This validation demonstrates the local MVP slice, not production readiness.
 - Silver is a local foundation and not a final analytics model.
+- Sample/offline ingestion still does not prove real source semantics.
 
 ### Verified artifact paths (relative)
 
 ```text
 orchestration/workspace/runs/<run-id>/landing/landing/weather/meteocat/meteocat-weather/ingestion_date=<date>/sample.json
 orchestration/workspace/runs/<run-id>/bronze/bronze/weather/meteocat/stations-metadata/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/bronze/bronze/weather/meteocat/variables-metadata/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/bronze/bronze/weather/meteocat/measured-variable/processing_date=<date>/records.jsonl
 orchestration/workspace/runs/<run-id>/silver/silver/weather/meteocat/stations/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/silver/silver/weather/meteocat/variables/processing_date=<date>/records.jsonl
+orchestration/workspace/runs/<run-id>/silver/silver/weather/meteocat/measurements/processing_date=<date>/records.jsonl
 orchestration/workspace/runs/<run-id>/reports/run-summary.json
 orchestration/workspace/observability/run-observability-report.json
 orchestration/workspace/observability/run-observability-report.md

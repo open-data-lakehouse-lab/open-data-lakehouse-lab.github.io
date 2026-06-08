@@ -1,6 +1,6 @@
 # Current Local Flow
 
-The current local data flow demonstrates a full vertical slice from dataset selection to visualization.
+The current local data flow supports multi-resource execution with `--resource all`, demonstrating a full vertical slice from dataset selection to visualization.
 
 ## Mermaid Diagram
 
@@ -16,6 +16,14 @@ flowchart LR
     H --> I[Observability<br/>JSON and Markdown reports]
     I --> J[Dashboards<br/>static HTML]
 ```
+
+## Resource Mapping
+
+| Resource | Silver entity |
+| --- | --- |
+| `stations-metadata` | `stations` |
+| `variables-metadata` | `variables` |
+| `measured-variable` | `measurements` |
 
 ## Local Artifact Types
 

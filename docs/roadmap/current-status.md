@@ -10,7 +10,7 @@ This page tracks the current progress and roadmap of the Open Data Lakehouse Lab
 
 ### M1 - Weather MVP Local Slice
 - **Status**: In progress / First local vertical slice implemented.
-- **Details**: The `meteocat-weather` dataset flow is functional in a local environment, covering catalog selection through to static dashboard generation. First local E2E run with Silver verified successfully.
+- **Details**: The `meteocat-weather` dataset flow is functional in a local environment, covering catalog selection through to static dashboard generation. First local multi-resource E2E run with Silver verified successfully.
 
 ## Implementation Details
 
@@ -26,4 +26,4 @@ This page tracks the current progress and roadmap of the Open Data Lakehouse Lab
 
 ## Roadmap Notes
 
-The project follows an incremental approach. Current efforts are focused on stabilizing the local MVP flow before moving towards cloud integration and more complex data modeling (Gold layers). Silver exists as a local foundation, not final analytics model.
+The project follows an incremental approach. Current efforts are focused on stabilizing the local MVP flow before moving towards cloud integration and more complex data modeling (Gold layers). First local multi-resource E2E run with Silver verified successfully. Silver exists as a local foundation, not final analytics model. Sample/offline ingestion still requires real API hardening.
