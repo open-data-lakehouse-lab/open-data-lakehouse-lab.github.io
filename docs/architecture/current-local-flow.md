@@ -1,13 +1,13 @@
 # Current Local Flow
 
-The current local data flow supports multi-resource execution with `--resource all`, demonstrating a full vertical slice from dataset selection to visualization.
+The current local data flow supports multi-resource execution with `--resource all` and optional landing contract validation with `--use-contracts`, demonstrating a full vertical slice from dataset selection to visualization.
 
 ## Mermaid Diagram
 
 ```mermaid
 flowchart LR
     A[Dataset Catalog<br/>meteocat-weather selected] --> B[Ingestion<br/>landing JSON]
-    B --> C[Landing Quality<br/>JSON validation]
+    B --> C[Landing Quality<br/>JSON & optional contracts]
     C --> D[Transformation<br/>bronze JSONL]
     D --> E[Bronze Quality<br/>JSONL validation]
     E --> F[Silver Transformation<br/>silver JSONL]

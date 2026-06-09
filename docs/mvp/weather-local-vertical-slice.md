@@ -38,8 +38,16 @@ The flow currently focuses on the following stages:
 
 A complete local multi-resource run with Silver was verified successfully.
 
+The same flow was also verified with optional landing contract validation:
+- Verified command modes:
+  - `--resource all`
+  - `--resource all --use-contracts`
+
+Key characteristics:
 - The run used `--resource all`.
 - The run used sample/offline ingestion.
+- Contract validation is optional.
+- When enabled, landing JSON is validated against draft internal contracts and permissive schemas from `datasets-catalog`.
 - The flow produced:
   - landing JSON
   - bronze JSONL for each supported resource
@@ -51,6 +59,7 @@ A complete local multi-resource run with Silver was verified successfully.
 - This validation demonstrates the local MVP slice, not production readiness.
 - Silver is a local foundation and not a final analytics model.
 - Sample/offline ingestion still does not prove real source semantics.
+- Contracts are draft/minimal/internal, not official upstream contracts.
 
 ### Verified artifact paths (relative)
 
