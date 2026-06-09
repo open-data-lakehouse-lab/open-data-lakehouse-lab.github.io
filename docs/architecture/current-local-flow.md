@@ -29,7 +29,7 @@ flowchart LR
 
 The flow produces the following artifact types:
 
-- **Landing**: `JSON`
+- **Landing**: `JSON` (Supports hardened opt-in real API mode; sample/offline remains the default E2E flow).
 - **Bronze**: `JSONL`
 - **Silver**: `JSONL`
 - **Observability**: `JSON` and `Markdown` reports

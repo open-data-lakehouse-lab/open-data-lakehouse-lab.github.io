@@ -58,7 +58,8 @@ Key characteristics:
 - Generated artifacts are reproducible and not committed.
 - This validation demonstrates the local MVP slice, not production readiness.
 - Silver is a local foundation and not a final analytics model.
-- Sample/offline ingestion still does not prove real source semantics.
+- Sample/offline ingestion remains the validated default.
+- Live API verification is considered future/manual work.
 - Contracts are draft/minimal/internal, not official upstream contracts.
 
 ### Verified artifact paths (relative)
@@ -76,6 +77,21 @@ orchestration/workspace/observability/run-observability-report.json
 orchestration/workspace/observability/run-observability-report.md
 orchestration/workspace/dashboard/index.html
 ```
+
+## Real API ingestion hardening
+
+The Meteocat real API ingestion mode has been hardened:
+
+- **Sample/offline mode** remains the validated default for the local E2E flow.
+- **Meteocat real mode** is opt-in and requires a `METEOCAT_API_KEY`.
+- **Hardening features**:
+  - Configurable timeout and retry settings.
+  - Automatic retry support for transient failures (HTTP 429, 500, 502, 503, 504 and timeouts).
+  - Clear HTTP error handling for non-transient failures (HTTP 400, 401, 403, 404).
+  - Invalid JSON responses are handled with clear error reporting.
+  - Connector-specific errors do not expose sensitive information (like API keys).
+- **Testing**: Tests use mocked HTTP calls and do not require real network access or API keys.
+- **Limitation**: Live API verification is still considered future work.
 
 ## Security and Credentials
 

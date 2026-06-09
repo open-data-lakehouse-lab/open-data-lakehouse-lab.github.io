@@ -5,7 +5,7 @@ The following repositories have been implemented or initialized to support the c
 | Repository | Current Role | Current Status | Main CLI/Tooling | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | `datasets-catalog` | Dataset metadata and selection | Foundation implemented | YAML / Python | Contains `meteocat-weather` definition, draft landing contracts and schemas. |
-| `ingestion` | Data fetching and landing | Local MVP slice implemented | Python | Supports real and sample ingestion. |
+| `ingestion` | Data fetching and landing | Local MVP slice implemented | Python | Supports hardened opt-in real API mode and sample mode. |
 | `transformation` | Data processing (Bronze) | Local MVP slice implemented | Python | Focuses on JSON to JSONL conversion. |
 | `quality` | Data validation | Local MVP slice implemented | Python / local quality checks | Validates Landing and Bronze artifacts. Supports optional landing contract/schema validation. |
 | `orchestration` | Pipeline coordination | Local MVP slice implemented | Python / CLI | Manages multi-resource Weather workflow with optional contract validation. |

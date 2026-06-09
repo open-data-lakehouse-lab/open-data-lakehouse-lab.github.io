@@ -18,6 +18,7 @@ This page tracks the current progress and roadmap of the Open Data Lakehouse Lab
 | :--- | :--- | :--- |
 | **Cloud/Local Azure Lab** | Foundation exists | Not yet integrated into the MVP flow. |
 | **Real Cloud Deployment** | Not implemented | Currently focusing on local-first development. |
+| **Real API Ingestion Hardening** | Implemented | Meteocat real API ingestion mode hardened (opt-in). |
 | **Medallion - Bronze** | Implemented | JSONL format used. |
 | **Medallion - Silver** | Implemented | Silver JSONL foundation. |
 | **Medallion - Gold** | Not implemented | Future modeling work required. |
@@ -27,4 +28,4 @@ This page tracks the current progress and roadmap of the Open Data Lakehouse Lab
 
 ## Roadmap Notes
 
-The project follows an incremental approach. Current efforts are focused on stabilizing the local MVP flow before moving towards cloud integration and more complex data modeling (Gold layers). First local multi-resource E2E run with Silver and optional landing contract validation verified successfully. Silver exists as a local foundation, not final analytics model. Sample/offline ingestion still requires real API hardening. Contracts are draft/minimal/internal.
+The project follows an incremental approach. Current efforts are focused on stabilizing the local MVP flow before moving towards cloud integration and more complex data modeling (Gold layers). First local multi-resource E2E run with Silver and optional landing contract validation verified successfully. Silver exists as a local foundation, not final analytics model. Meteocat real API ingestion hardening implemented (opt-in). Live API verification remains future work. Contracts are draft/minimal/internal.
